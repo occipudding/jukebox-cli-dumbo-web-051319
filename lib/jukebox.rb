@@ -27,7 +27,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.chomp
-  choice.match(/\D/i) && songs.include?(choice) ? "Playing #{choice}" : choice.match(/\d/) && choice <= songs.size ? "Playing #{songs[choice + 1]}" : "Invalid input, please try again"
+  #choice.match(/\D/i) && songs.include?(choice) ? "Playing #{choice}" : choice.match(/\d/) && choice <= songs.size ? "Playing #{songs[choice + 1]}" : "Invalid input, please try again"
 end
 
 play(songs)
