@@ -32,6 +32,7 @@ def play(songs)
   msg = ""
   if choice !~ /\D/
     msg = "#{songs[choice.to_i - 1]}"
+  end
   binding.pry
   puts msg
 end
