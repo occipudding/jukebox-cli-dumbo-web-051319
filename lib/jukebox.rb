@@ -30,7 +30,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
   msg = ""
-  if choice !~ /\D/
+  if choice !~ /\D/ && choice.to_i <= songs.length
     msg = "Playing #{songs[choice.to_i - 1]}"
   elsif songs.include?(choice)
     msg = "Playing #{choice}"
