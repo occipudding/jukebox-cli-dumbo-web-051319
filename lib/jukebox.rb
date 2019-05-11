@@ -37,8 +37,6 @@ def play(songs)
   else
     msg = "Invalid input, please try again"
   end
-  #binding.pry
-  puts msg
 end
 
 def exit_jukebox
