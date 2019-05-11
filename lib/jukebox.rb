@@ -29,14 +29,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.chomp
-  msg = ""
-  if choice !~ /\D/ && choice.to_i <= songs.length
-    msg = "Playing #{songs[choice.to_i - 1]}"
-  elsif songs.include?(choice)
-    msg = "Playing #{choice}"
-  else
-    msg = "Invalid input, please try again"
-  end
+  puts choice !~ /\D/ && choice.to_i <= songs.length ? "Playing #{songs[choice.to_i - 1]}" : songs.include?(choice) ? "Playing #{choice}" : "Invalid input, please try again"
 end
 
 def exit_jukebox
