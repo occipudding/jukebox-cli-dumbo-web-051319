@@ -30,7 +30,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
   binding.pry
-  
+  if Integer(choice).is_a? Numeric
 end
 
 play(songs)
