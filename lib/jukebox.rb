@@ -33,7 +33,7 @@ def play(songs)
   if choice =~ /\d+/
     msg = "Playing #{songs[Integer(choice) - 1]}"
   elsif songs.include?(choice)
-    msg = "Playing #{songs[songs.index(choice)]}"
+    msg = "Playing #{choice}"
   else
     msg = "Invalid input, please try again"
   end
