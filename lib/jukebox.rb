@@ -29,12 +29,12 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
-  msg = ""
+  song = ""
   if choice !~ /\D/
-    msg = "Playing #{songs[choice.to_i - 1]}"
+    song = songs[choice.to_i - 1]
   end
   #binding.pry
-  puts msg
+  puts "Playing #{song}"
 end
 
 #play(songs)
