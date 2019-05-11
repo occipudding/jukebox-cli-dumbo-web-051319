@@ -32,7 +32,7 @@ def play(songs)
   if Integer(choice).is_a? Numeric
     puts "Playing #{songs[choice.to_i]}"
   elsif songs.include?(choice)
-    puts "Playing #{songs[songs.index(choice)]}"
+    puts "Playing #{songs[songs.index(choice) + 1]}"
   else
     puts "Invalid input, please try again"
   end
