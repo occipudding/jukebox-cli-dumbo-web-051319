@@ -30,6 +30,8 @@ def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
   msg = ""
+  if choice !~ /\D/
+    msg = "#{songs[choice.to_i - 1]}"
   binding.pry
   puts msg
 end
