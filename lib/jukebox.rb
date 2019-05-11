@@ -30,4 +30,3 @@ def play(songs)
   #choice.match(/\D/i) && songs.include?(choice) ? "Playing #{choice}" : choice.match(/\d/) && choice <= songs.size ? "Playing #{songs[choice + 1]}" : "Invalid input, please try again"
 end
 
-play(songs)
