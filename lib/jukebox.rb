@@ -20,7 +20,7 @@ end
 
 def list(songs)
   puts songs.each do |song|
-    song == songs.last ? "#{songs.index(song) + 1}. #{song}" : "#{songs.index(song) + 1}. #{song}\n"
+    "#{songs.index(song) + 1}. #{song}\n"
   end
 end
 
