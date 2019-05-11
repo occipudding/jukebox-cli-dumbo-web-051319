@@ -29,9 +29,13 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
+  msg = ""
   if choice =~ /\d+/
-    puts "Playing #{songs[Integer(choice) - 1]}"
+    msg = "Playing #{songs[Integer(choice) - 1]}"
+  elsif songs.include?(choice)
+    msg = "Playing #{songs[songs.index(choice)]}"
   else
-    puts "Invalid input, please try again"
+    msg = "Invalid input, please try again"
   end
+  puts msg
 end
