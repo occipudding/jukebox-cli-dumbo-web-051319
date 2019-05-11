@@ -29,12 +29,16 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
-  song = ""
+  msg = ""
   if choice !~ /\D/
-    song = songs[choice.to_i - 1]
+    msg = "Playing #{songs[choice.to_i - 1]}"
+  elsif songs.include?(choice)
+    msg = "Playing #{choice}"
+  else
+    msg = "Invalid input, please try again"
   end
   #binding.pry
-  puts "Playing #{song}"
+  puts msg
 end
 
 def exit_jukebox
