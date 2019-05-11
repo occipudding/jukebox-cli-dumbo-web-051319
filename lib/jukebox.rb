@@ -27,5 +27,5 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.chomp
-  (songs.match(/\D/ig) && songs.include?(choice)) || 
+  (songs.match(/\D/i) && songs.include?(choice)) || 
 end
