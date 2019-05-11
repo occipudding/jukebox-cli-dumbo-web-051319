@@ -30,7 +30,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
   if Integer(choice).is_a? Numeric
-    puts "Playing #{songs[choice.to_i + 1]}"
+    puts "Playing #{songs[choice.to_i - 1]}"
   elsif songs.include?(choice)
     puts "Playing #{songs[songs.index(choice)]}"
   else
