@@ -31,3 +31,5 @@ def play(songs)
   choice = STDIN.gets.chomp
   binding.pry
 end
+
+play(songs)
