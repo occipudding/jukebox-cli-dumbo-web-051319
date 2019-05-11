@@ -31,6 +31,12 @@ def play(songs)
   choice = STDIN.gets.chomp
   binding.pry
   if Integer(choice).is_a? Numeric
+    puts "Playing #{songs[choice.to_i]}"
+  elsif songs.include?(choice)
+    puts "Playing #{songs[songs.index(choice)]}"
+  else
+    puts "Invalid input, please try again"
+  end
 end
 
 play(songs)
