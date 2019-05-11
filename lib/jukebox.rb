@@ -27,5 +27,5 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = STDIN.gets.chomp
-  puts choice.match(/\D/i) && songs.include?(choice) ? "Playing #{choice}" : choice.match(/\d/) && choice <= songs.size ? "Playing #{songs[choice + 1]}" : "Invalid input, please try again"
+  choice.match(/\D/i) && songs.include?(choice) ? put "Playing #{choice}" : choice.match(/\d/) && choice <= songs.size ? puts "Playing #{songs[choice + 1]}" : puts "Invalid input, please try again"
 end
