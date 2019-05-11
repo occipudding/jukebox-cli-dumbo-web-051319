@@ -24,3 +24,8 @@ def list(songs)
   end
 end
 
+def play(songs)
+  puts "Please enter a song name or number:"
+  choice = gets.chomp
+  (songs.match(/\D/ig) && songs.include?(choice)) || 
+end
