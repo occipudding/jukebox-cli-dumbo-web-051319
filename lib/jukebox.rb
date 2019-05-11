@@ -31,7 +31,7 @@ def play(songs)
   choice = STDIN.gets.chomp
   
     msg = "Playing #{songs[choice.to_i - 1]}"
-  end
+
   #binding.pry
   puts msg
 end
